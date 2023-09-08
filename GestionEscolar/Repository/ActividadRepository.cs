@@ -21,14 +21,23 @@ namespace GestionEscolar.Repository
                                 new Pregunta
                                 {
                                     id = 1,
+                                    tipo = TipoPregunta.Numerica,
                                     pregunta = "Suma 1 + 1",
                                     respuestaEsperada = "2"
                                 },
                                 new Pregunta
                                 {
                                     id = 2,
+                                    tipo = TipoPregunta.Numerica,
                                     pregunta = "Suma 5 + 5",
                                     respuestaEsperada = "10"
+                                },
+                                new Pregunta
+                                {
+                                    id = 3,
+                                    tipo = TipoPregunta.Textual,
+                                    pregunta = "¿Qual es el planeta mas cerca del sol?",
+                                    respuestaEsperada = "Mercurio"
                                 }
                             }
                         }

@@ -9,24 +9,24 @@ namespace GestionEscolar.Services
     public class PonderacionesService
     {
         //Variables
-        public String ACTIVIDADES = "ACTIVIDADES";
-        public String COMPETENCIAS = "COMPETENCIAS";
+        public string ACTIVIDADES = "ACTIVIDADES";
+        public string COMPETENCIAS = "COMPETENCIAS";
 
         //Repositorio
         PonderacionRepository ponderacionRepository = new PonderacionRepository();
 
         //modificar las ponderaciones
-        public void modificarPonderacion(string evaluacion, PonderacionesRequest ponderaciones)
+        public PonderacionesResponse modificarPonderacion(string evaluacion, PonderacionesRequest datos)
         {
             int ponderacion = 0;
             //comprovamos que tipo de evaluacion es
             if (evaluacion.ToUpper().Equals(ACTIVIDADES))
             {
-                ponderacion = comprobarPoderacionEspecifica(ponderaciones);
+                ponderacion = comprobarPoderacionEspecifica(datos);
             }
             else if (evaluacion.ToUpper().Equals(COMPETENCIAS))
             {
-                ponderacion = comprobarPoderacionCompetencia(ponderaciones);
+                ponderacion = comprobarPoderacionCompetencia(datos);
             }
             else
             {
@@ -38,6 +38,10 @@ namespace GestionEscolar.Services
                 throw new PonderacionException("Las ponderaciones no suman 100");
             }
             //Aqui guardariamos las nuevas ponderaciones en caso de tener persistencia de datos
+            PonderacionesResponse ponderacionesResponse = new PonderacionesResponse();
+            ponderacionesResponse.listPonderaciones = datos.listPonderaciones;
+
+            return ponderacionesResponse;
         }
 
         //Comprobar las ponderaciones de competitiva

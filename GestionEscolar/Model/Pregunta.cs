@@ -4,7 +4,7 @@
     {
         public int id { get; set; }
         public String pregunta { get; set; }
-        public String tipo { get; set; }
+        public TipoPregunta tipo { get; set; }
         public String respuestaEsperada { get; set; }
         public String respuesta { get; set; }
     }

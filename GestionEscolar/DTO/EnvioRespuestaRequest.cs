@@ -9,7 +9,7 @@
     {
         public int idEjercicio { get; set; }
         public int idPregunta { get; set; }
-        public int respuesta { get; set; }
+        public string respuesta { get; set; }
     }
 
 }

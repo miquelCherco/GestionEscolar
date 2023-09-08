@@ -22,7 +22,7 @@ namespace GestionEscolar.Controllers
             try
             {
                 inicializarService.inicializarDatos(inicializarRequest);
-                    return 2;
+                return "OK";
             }
             catch (CompetenciaNotExistException ex)
             {
@@ -36,8 +36,6 @@ namespace GestionEscolar.Controllers
             {
                 return ex.Message;
             }
-            return null;
-
         }
 
         [HttpPost]
@@ -60,11 +58,15 @@ namespace GestionEscolar.Controllers
             catch (PreguntaNotFoundException ex)
             {
                 return ex.Message;
-            }            
+            }
+            catch (PreguntaRepetidaExeption ex)
+            {
+                return ex.Message;
+            }
             return actividadResponse;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("getNotasByEvaluacion")]
         //obtener nota por tipo de evaluacion
         public dynamic getNotaByEvaluacion(String evaluacion)
@@ -86,9 +88,11 @@ namespace GestionEscolar.Controllers
         //modificar ponderaciones
         public dynamic modificarPonderacion(String evaluacion,[FromBody] PonderacionesRequest ponderaciones)
         {
+
+            PonderacionesResponse ponderacionesResponse = new PonderacionesResponse();
             try
             {
-                ponderacionesService.modificarPonderacion(evaluacion,ponderaciones);
+                ponderacionesResponse = ponderacionesService.modificarPonderacion(evaluacion,ponderaciones);
             }
             catch (EvaluacioNotFoundException ex)
             {
@@ -106,7 +110,7 @@ namespace GestionEscolar.Controllers
             {
                 return ex.Message;
             }
-            return "OK";
+            return ponderacionesResponse;
         }
 
     }

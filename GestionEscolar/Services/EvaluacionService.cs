@@ -9,8 +9,8 @@ namespace GestionEscolar.Services
     public class EvaluacionService
     {
         //Varibales
-        public String ACTIVIDADES = "ACTIVIDADES";
-        public String COMPETENCIAS = "COMPETENCIAS";
+        public string ACTIVIDADES = "ACTIVIDADES";
+        public string COMPETENCIAS = "COMPETENCIAS";
 
         //Repositorios
         private ActividadRepository actividadRepository = new ActividadRepository();
@@ -26,6 +26,7 @@ namespace GestionEscolar.Services
                 throw new ActividadNotFoundException("Actividad no encontrada");
 
             int aciertos = 0;
+            Dictionary<int,List<int>> listEjerciciosPregunta = new Dictionary<int,List<int>>();
             //recorremoslas respuestas
             foreach (var respuesta in datos.listRespuestas)
             {
@@ -38,6 +39,18 @@ namespace GestionEscolar.Services
                 Pregunta pregunta = ejercicio.listPreguntas.Find(preg => preg.id == respuesta.idPregunta);
                 if (pregunta == null)
                     throw new PreguntaNotFoundException("Pregunta no encontrada");
+
+                List<int> listPreguntas = new List<int>();
+                if (listEjerciciosPregunta.ContainsKey(ejercicio.id))
+                {
+                    if (listEjerciciosPregunta.Keys.Contains(pregunta.id))
+                    {
+                        throw new PreguntaRepetidaExeption("La misma pregunta se ha enviado mas de una vez");
+                    }
+                }
+
+                listPreguntas.Add(pregunta.id);
+                listEjerciciosPregunta[ejercicio.id] = listPreguntas;
 
                 //comprobamos que la respuesta sea correcta
                 if (pregunta.respuestaEsperada.Equals(respuesta.respuesta.ToString()))

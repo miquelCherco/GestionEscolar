@@ -31,11 +31,11 @@ namespace GestionEscolar.Services
             {
                 //comprobamos que el tipo especifico no este vacio i que exista
                 if (actividad.especifica.Equals("") || listEspecifica.Find(especifica => especifica.nombre.Equals(actividad.especifica)) == null)
-                    throw new EspecificacionNotExistException("La actividad " + actividad.id + " no tiene especificación");
+                    throw new EspecificacionNotExistException("La actividad " + actividad.id + " no existe la especificación");
 
                 //comprobamos que la competencia no este vacio i que exista
                 if (actividad.competencia.Equals("") || listCompetencia.Find(competencia => competencia.nombre.Equals(actividad.competencia)) == null)
-                    throw new CompetenciaNotExistException("La actividad " + actividad.id + " no tiene competéncia");
+                    throw new CompetenciaNotExistException("La actividad " + actividad.id + " no existe la competéncia");
             }
         }
 
