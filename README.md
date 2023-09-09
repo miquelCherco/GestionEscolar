@@ -6,6 +6,8 @@ Con las exportaciones ya tendrá ejemplos para hacer la pruebas de entrada de da
 
 Se ha realizado con la versió 6.0
 
+Dentro la carpeta de GestonEscolar hay una carpeta donde encontrareis la Postman Colection.
+
 
 Peticiones:
 
