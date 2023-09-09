@@ -1,7 +1,5 @@
-﻿using GestionEscolar.Controllers;
-using GestionEscolar.DTO;
+﻿using GestionEscolar.DTO;
 using GestionEscolar.Exceptions;
-using GestionEscolar.Model;
 using GestionEscolar.Services;
 
 namespace GestionEscolar.Test
@@ -33,8 +31,14 @@ namespace GestionEscolar.Test
                 }
             };
             request.listRespuestas = listRespuestas;
+
+            ActividadResponse r = new ActividadResponse();
+            r.nota = 10;
+            r.numeroRepeticiones = 3;
+
             ActividadResponse response = service.EnviarRespuestas(idActividad, request);
-            Assert.IsType<ActividadResponse>(response);
+
+            Assert.Equivalent(response,r);
         }
 
         [Fact]

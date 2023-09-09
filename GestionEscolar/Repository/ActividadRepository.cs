@@ -1,5 +1,4 @@
 ﻿using GestionEscolar.Model;
-using System.Reflection.Metadata.Ecma335;
 
 namespace GestionEscolar.Repository
 {
@@ -169,5 +168,5 @@ namespace GestionEscolar.Repository
         }
     }
 
-   
+
 }

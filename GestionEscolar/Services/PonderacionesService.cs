@@ -1,8 +1,6 @@
 ﻿using GestionEscolar.DTO;
 using GestionEscolar.Exceptions;
-using GestionEscolar.Model;
 using GestionEscolar.Repository;
-using System;
 
 namespace GestionEscolar.Services
 {
@@ -34,7 +32,7 @@ namespace GestionEscolar.Services
                 throw new EvaluacioNotFoundException("La evaluacion " + evaluacion + " no existe");
             }
 
-            if(ponderacion != PERCENTATGE)
+            if (ponderacion != PERCENTATGE)
             {
                 throw new PonderacionException("Las ponderaciones no suman 100");
             }
@@ -48,7 +46,7 @@ namespace GestionEscolar.Services
         private PonderacionesResponse ModificarClaseResponse(List<PonderacionRequest> listPonderacionRequest)
         {
             PonderacionesResponse ponderacionesResponse = new PonderacionesResponse();
-            List<PonderacionResponse> listPonderacionResponse = new List<PonderacionResponse> ();
+            List<PonderacionResponse> listPonderacionResponse = new List<PonderacionResponse>();
             foreach (var ponderacion in listPonderacionRequest)
             {
                 PonderacionResponse ponderacionResponse = new PonderacionResponse();
@@ -68,7 +66,7 @@ namespace GestionEscolar.Services
             {
                 //comprovamos que la competencia exista
                 Model.Competencia competenciaActual = ponderacionRepository.GetCompetencias().Find(comp => comp.nombre.Equals(competencia.nombre));
-                if(competenciaActual == null)
+                if (competenciaActual == null)
                 {
                     throw new CompetenciaNotFoundException("La competencia " + competencia.nombre + " no existe");
                 }

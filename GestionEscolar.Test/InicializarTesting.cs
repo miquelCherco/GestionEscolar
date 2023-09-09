@@ -2,14 +2,13 @@
 using GestionEscolar.Exceptions;
 using GestionEscolar.Model;
 using GestionEscolar.Services;
-using Microsoft.AspNetCore.Http;
 using static GestionEscolar.DTO.InicializarRequest;
 
 namespace GestionEscolar.Test
 {
     public class InicializarTesting
     {
-        public InicializarService service = new InicializarService();  
+        public InicializarService service = new InicializarService();
 
         [Fact]
         public void InicializarDatosOk()
@@ -39,7 +38,7 @@ namespace GestionEscolar.Test
                         }
                     },
                     competencia = "Social",
-                    especifica = "",
+                    especifica = "Prueba",
                     nota = 10
                 }
             };
@@ -80,9 +79,7 @@ namespace GestionEscolar.Test
             request.listActividades = listActividades;
             request.listCompetencias = listCompetencia;
             request.listEspecificas = listEspecifica;
-
-
-            Assert.NotNull(() => service.InicializarDatos(request));
+            Assert.True(service.InicializarDatos(request));
         }
 
         [Fact]

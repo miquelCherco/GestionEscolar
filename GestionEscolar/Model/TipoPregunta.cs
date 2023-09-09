@@ -2,6 +2,6 @@
 {
     public enum TipoPregunta
     {
-        Numerica,Textual
+        Numerica, Textual
     }
 }

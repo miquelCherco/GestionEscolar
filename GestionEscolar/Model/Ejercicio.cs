@@ -2,7 +2,7 @@
 {
     public class Ejercicio
     {
-        public int id {  get; set; }
-        public List<Pregunta> listPreguntas {  get; set; }
+        public int id { get; set; }
+        public List<Pregunta>? listPreguntas { get; set; }
     }
 }

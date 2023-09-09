@@ -177,7 +177,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 09 Sep 2023 12:54:22 GMT"
+							"value": "Sat, 09 Sep 2023 19:44:53 GMT"
 						},
 						{
 							"key": "Server",
@@ -189,10 +189,10 @@
 						}
 					],
 					"cookie": [],
-					"body": "La actividad 1 no tiene competéncia"
+					"body": "La actividad 1 no existe la competéncia"
 				},
 				{
-					"name": "Ponderaciones superior a 100 NOK",
+					"name": "Ponderaciones no suman 100 NOK",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -784,7 +784,7 @@
 					"body": "{\n    \"listPonderaciones\": [\n        {\n            \"nombre\": \"Matematica\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Social\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Digital\",\n            \"ponderacion\": 60\n        }\n    ]\n}"
 				},
 				{
-					"name": "Ponderaciones superior a 100 NOK",
+					"name": "Ponderaciones no suman 100 NOK",
 					"originalRequest": {
 						"method": "PATCH",
 						"header": [],

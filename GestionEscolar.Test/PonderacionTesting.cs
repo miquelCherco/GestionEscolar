@@ -1,6 +1,5 @@
 ﻿using GestionEscolar.DTO;
 using GestionEscolar.Exceptions;
-using GestionEscolar.Model;
 using GestionEscolar.Services;
 
 namespace GestionEscolar.Test
@@ -34,7 +33,26 @@ namespace GestionEscolar.Test
             string evaluacion = "COMPETENCIAS";
             PonderacionesResponse response = service.ModificarPonderacion(evaluacion, request);
 
-            Assert.IsType<PonderacionesResponse>(response);
+            PonderacionesResponse ponderacionResponse = new PonderacionesResponse();
+            List<PonderacionResponse> listPonderacionesResponse = new List<PonderacionResponse> {
+                new PonderacionResponse {
+                    nombre = "Digital",
+                    ponderacion = 30
+                },
+                new PonderacionResponse {
+                    nombre = "Social",
+                    ponderacion = 20
+                },
+                new PonderacionResponse {
+                    nombre = "Matematica",
+                    ponderacion = 50
+                }
+            };
+
+
+            ponderacionResponse.listPonderaciones = listPonderacionesResponse;
+
+            Assert.Equivalent(response,ponderacionResponse);
         }
 
         [Fact]
@@ -58,7 +76,7 @@ namespace GestionEscolar.Test
 
             request.listPonderaciones = listPonderaciones;
             string evaluacion = "TEST";
-            
+
             Assert.Throws<EvaluacioNotFoundException>(() => service.ModificarPonderacion(evaluacion, request));
         }
 

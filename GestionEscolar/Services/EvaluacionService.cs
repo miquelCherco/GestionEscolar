@@ -26,7 +26,7 @@ namespace GestionEscolar.Services
                 throw new ActividadNotFoundException("La Actividad " + idActividad + " no existe");
 
             int aciertos = 0;
-            Dictionary<int,List<int>> listEjerciciosPregunta = new Dictionary<int,List<int>>();
+            Dictionary<int, List<int>> listEjerciciosPregunta = new Dictionary<int, List<int>>();
             //recorremoslas respuestas
             foreach (var respuesta in datos.listRespuestas)
             {
@@ -80,7 +80,7 @@ namespace GestionEscolar.Services
 
             actividadResponse.nota = nota;
             actividadResponse.numeroRepeticiones = repeticiones;
-             
+
             return actividadResponse;
         }
 
@@ -107,7 +107,7 @@ namespace GestionEscolar.Services
         //calcular la nota por competencia
         private float CalcularNotaPorCompetencia()
         {
-            Dictionary<string,List<float>> notas = new Dictionary<string,List<float>>();
+            Dictionary<string, List<float>> notas = new Dictionary<string, List<float>>();
             foreach (var actividad in actividadRepository.GetActividades())
             {
                 //si auno no hay la competenci en el diccionario lo añadimos
@@ -175,6 +175,6 @@ namespace GestionEscolar.Services
             return notaFinal;
         }
 
-    
+
     }
 }

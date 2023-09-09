@@ -1,6 +1,5 @@
 ﻿using GestionEscolar.DTO;
 using GestionEscolar.Exceptions;
-using GestionEscolar.Repository;
 using static GestionEscolar.DTO.InicializarRequest;
 
 namespace GestionEscolar.Services
@@ -9,11 +8,12 @@ namespace GestionEscolar.Services
     {
 
         //Inicializacion de datos
-        public void InicializarDatos(InicializarRequest datos)
+        public Boolean InicializarDatos(InicializarRequest datos)
         {
             ComprobarPoderacionCompetencia(datos.listCompetencias);
             ComprobarPoderacionEspecifica(datos.listEspecificas);
             GetDatosOK(datos);
+            return true;
             //Aqui guradariamos los datos en caso de tener persistencia de datos
         }
 
@@ -33,7 +33,7 @@ namespace GestionEscolar.Services
 
                 //comprobamos que la competencia no este vacio i que exista
                 if (actividad.competencia.Equals("") || listCompetencia.Find(competencia => competencia.nombre.Equals(actividad.competencia)) == null)
-                    throw new CompetenciaNotFoundException("La actividad " + actividad.id + " no tiene competéncia");
+                    throw new CompetenciaNotFoundException("La actividad " + actividad.id + " no existe la competéncia");
             }
         }
 

@@ -1,5 +1,4 @@
 ﻿using GestionEscolar.Model;
-using System.Collections.Generic;
 
 namespace GestionEscolar.Repository
 {

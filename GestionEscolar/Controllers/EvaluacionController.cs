@@ -19,7 +19,7 @@ namespace GestionEscolar.Controllers
         //envio de nuevas respuestas de una actividad
         public IActionResult EnvioRespuestas(int idActividad, [FromBody] EnvioRespuestaRequest envioRespuestaRequest)
         {
-            ActividadResponse actividadResponse = null;
+            ActividadResponse actividadResponse;
             try
             {
                 actividadResponse = evaluacionService.EnviarRespuestas(idActividad, envioRespuestaRequest);

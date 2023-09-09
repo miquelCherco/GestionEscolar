@@ -23,7 +23,6 @@ namespace GestionEscolar.Controllers
             }
             catch (CompetenciaNotFoundException ex)
             {
-                //return Request.cr(HttpStatusCode.NotFound, ex.Message);
                 return NotFound(ex.Message);
             }
             catch (EspecificacionNotFoundException ex)
@@ -34,8 +33,8 @@ namespace GestionEscolar.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            return Created("","OK");
-        }       
+            return Created("", "OK");
+        }
     }
 }
 
