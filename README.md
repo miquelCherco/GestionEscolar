@@ -9,13 +9,13 @@ Se ha realizado con la versió 6.0
 
 Peticiones:
 
-* EndPoint 1 (InicializarDatos): Se ha hecho una petición de tipo POST, ya que en un caso real estaríamos guardado los datos.
+ EndPoint 1 (InicializarDatos): Se ha hecho una petición de tipo POST, ya que en un caso real estaríamos guardado los datos.
   
-* EndPoint 2 (EntrarRespuestas): Se ha hecho una petición de tipo POST, ya que estamos añadiendo datos nuevos.
+- EndPoint 2 (EntrarRespuestas): Se ha hecho una petición de tipo POST, ya que estamos añadiendo datos nuevos.
 
-* EndPoint 3 (DevuelveNota): Se ha hecho una petición de tipo GET, ya que lo que estamos haciendo es una cosulta de datos.
+- EndPoint 3 (DevuelveNota): Se ha hecho una petición de tipo GET, ya que lo que estamos haciendo es una cosulta de datos.
  
-* EndPoint 4 (ModificarPonderacion): Se ha hecho una petición de tipo PATCH porque estamos modificando una parte de los valores del las ponderaciones.
+- EndPoint 4 (ModificarPonderacion): Se ha hecho una petición de tipo PATCH porque estamos modificando una parte de los valores del las ponderaciones.
 
 
 Decisiones importantes del proyecto:
@@ -34,12 +34,11 @@ Decisiones importantes del proyecto:
 
 - Se ha creado varis servicios, ya que no todos tratan lo mismo y por tener más ordenado el código.
 
-- Para generar los test se ha generado un nuevo proyecto con Xunit.
-
-Para ejecutar los test des del Visual Studio en el menu de Prueva -> Ejecutar todas las pruebas
+- Para generar los test se ha generado un nuevo proyecto con Xunit. Para ejecutar los test des del Visual Studio en el menu de Prueva -> Ejecutar todas las pruebas
 
 
 Decisiones del ejercicio:
+
 - Al ser un poco libre, se han tomado algunas decisiones como se ha entendido.
 - Se entiende que una actividad tiene un tipo específico y un tipo de competencia.
 - Cada tipo contiene sus porcentajes.
