@@ -8,9 +8,13 @@ Con las exportaciones ya tendrá ejemplos para hacer la pruebas de entrada de da
 Decisiones importantes del proyecto:
 
 Peticiones -> 
+
   EndPoint 1 (InicializarDatos): Se ha hecho una petición de tipo POST, ya que en un caso real estaríamos guardado los datos.
+  
   EndPoint 2 (EntrarRespuestas): Se ha hecho una petición de tipo POST, ya que estamos añadiendo datos nuevos.
+ 
   EndPoint 3 (DevuelveNota): Se ha hecho una petición de tipo GET, ya que lo que estamos haciendo es una cosulta de datos.
+ 
   EndPoint 4 (ModificarPonderacion): Se ha hecho una petición de tipo PATCH porque estamos modificando una parte de los valores del las ponderaciones.
 
 Se ha creado una carpeta Model donde se han generado todas las entidades.
