@@ -2,7 +2,6 @@
 using GestionEscolar.Exceptions;
 using GestionEscolar.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace GestionEscolar.Controllers
 {
@@ -35,7 +34,7 @@ namespace GestionEscolar.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            return Ok("OK");
+            return Created("","OK");
         }       
     }
 }

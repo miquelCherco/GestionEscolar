@@ -10,6 +10,6 @@ namespace GestionEscolar.DTO
     public class PonderacionRequest
     {
         public string nombre { get; set; }
-        public int ponderacion { get; set; }
+        public float ponderacion { get; set; }
     }
 }

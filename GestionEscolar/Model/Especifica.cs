@@ -4,6 +4,6 @@
     {
         public int id {  get; set; }
         public string nombre {  get; set; }
-        public int ponderacio { get; set; }
+        public float ponderacion { get; set; }
     }
 }

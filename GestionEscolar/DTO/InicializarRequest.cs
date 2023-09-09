@@ -15,7 +15,7 @@ namespace GestionEscolar.DTO
             public string especifica { get; set; }
             public string competencia { get; set; }
             public List<EjercicioRequest> listEjercicios { get; set; }
-            public int nota { get; set; }
+            public float nota { get; set; }
         }
 
         public class EjercicioRequest

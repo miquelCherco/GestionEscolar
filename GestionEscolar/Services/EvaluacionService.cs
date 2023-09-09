@@ -130,10 +130,10 @@ namespace GestionEscolar.Services
             {
                 List<float> list = competenica.Value;
                 float sumNota = list.Sum(x => x);
-                float ponderacio = ponderacionRepository.GetCompetencias().Find(comp => comp.nombre.Equals(competenica.Key)).ponderacio;
+                float ponderacion = ponderacionRepository.GetCompetencias().Find(comp => comp.nombre.Equals(competenica.Key)).ponderacion;
                 float media = sumNota / list.Count;
 
-                notaFinal += media * ponderacio / 100;
+                notaFinal += media * ponderacion / 100;
             }
 
             return notaFinal;
@@ -166,10 +166,10 @@ namespace GestionEscolar.Services
             {
                 List<float> list = especifica.Value;
                 float sumNota = list.Sum(x => x);
-                float ponderacio = ponderacionRepository.GetEspecificas().Find(espe => espe.nombre.Equals(especifica.Key)).ponderacio;
+                float ponderacion = ponderacionRepository.GetEspecificas().Find(espe => espe.nombre.Equals(especifica.Key)).ponderacion;
                 float media = sumNota / list.Count;
 
-                notaFinal += media * ponderacio / 100;
+                notaFinal += media * ponderacion / 100;
             }
 
             return notaFinal;

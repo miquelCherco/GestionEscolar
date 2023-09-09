@@ -9,17 +9,17 @@ namespace GestionEscolar.Repository
             new Competencia {
                 id = 1,
                 nombre = "Digital",
-                ponderacio = 30
+                ponderacion = 30
             },
             new Competencia {
                 id = 2,
                 nombre = "Social",
-                ponderacio = 20
+                ponderacion = 20
             },
             new Competencia {
                 id = 3,
                 nombre = "Matematica",
-                ponderacio = 50
+                ponderacion = 50
             }
         };
 
@@ -28,22 +28,22 @@ namespace GestionEscolar.Repository
              new Especifica{
                 id = 1,
                 nombre = "Ejercicio",
-                ponderacio = 10
+                ponderacion = 10
             },
              new Especifica{
                  id = 2,
                 nombre = "Prueba",
-                ponderacio = 50
+                ponderacion = 50
             },
              new Especifica{
                  id = 3,
                 nombre = "Actividad",
-                ponderacio = 40
+                ponderacion = 40
             },
              new Especifica{
                  id = 4,
                 nombre = "Autoevaluacion",
-                ponderacio = 0
+                ponderacion = 0
             }
          };
 

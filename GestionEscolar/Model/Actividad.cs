@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.TagHelpers;
+﻿
 
 namespace GestionEscolar.Model
 {
@@ -9,7 +9,7 @@ namespace GestionEscolar.Model
         public List<Ejercicio> listEjercicios { get; set; }
         public string competencia { get; set; }
         public string especifica { get; set; }
-        public int nota { get; set; }
+        public float nota { get; set; }
 
     }
 }

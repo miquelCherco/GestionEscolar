@@ -19,7 +19,7 @@ namespace GestionEscolar.Services
         //modificar las ponderaciones
         public PonderacionesResponse ModificarPonderacion(string evaluacion, PonderacionesRequest datos)
         {
-            int ponderacion = 0;
+            float ponderacion = 0;
             //comprovamos que tipo de evaluacion es
             if (evaluacion.ToUpper().Equals(ACTIVIDADES))
             {
@@ -61,9 +61,9 @@ namespace GestionEscolar.Services
         }
 
         //Comprobar las ponderaciones de competitiva
-        private int ComprobarPoderacionCompetencia(PonderacionesRequest ponderaciones)
+        private float ComprobarPoderacionCompetencia(PonderacionesRequest ponderaciones)
         {
-            int ponderacio = 0;
+            float ponderacion = 0;
             foreach (var competencia in ponderaciones.listPonderaciones)
             {
                 //comprovamos que la competencia exista
@@ -72,15 +72,15 @@ namespace GestionEscolar.Services
                 {
                     throw new CompetenciaNotFoundException("La competencia " + competencia.nombre + " no existe");
                 }
-                ponderacio += competencia.ponderacion;
+                ponderacion += competencia.ponderacion;
             }
-            return ponderacio;
+            return ponderacion;
         }
 
         //comprovar las ponderaciones Especificas
-        private int ComprobarPoderacionEspecifica(PonderacionesRequest ponderaciones)
+        private float ComprobarPoderacionEspecifica(PonderacionesRequest ponderaciones)
         {
-            int ponderacio = 0;
+            float ponderacion = 0;
             foreach (var especifica in ponderaciones.listPonderaciones)
             {
                 //comprovamos que la especifica exista
@@ -89,9 +89,9 @@ namespace GestionEscolar.Services
                 {
                     throw new EspecificacionNotFoundException("Especifica " + especifica.nombre + " no existe");
                 }
-                ponderacio += especifica.ponderacion;
+                ponderacion += especifica.ponderacion;
             }
-            return ponderacio;
+            return ponderacion;
         }
     }
 }

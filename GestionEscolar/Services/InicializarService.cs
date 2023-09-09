@@ -40,12 +40,12 @@ namespace GestionEscolar.Services
         //Comprobamos que las ponderaciones de competencia sumen 100
         private void ComprobarPoderacionCompetencia(List<CompetenciaRequest> listCompetencias)
         {
-            float ponderacio = 0;
+            float ponderacion = 0;
             foreach (var competencia in listCompetencias)
             {
-                ponderacio += competencia.ponderacion;
+                ponderacion += competencia.ponderacion;
             }
-            if (ponderacio != 100)
+            if (ponderacion != 100)
             {
                 throw new PonderacionException("Las ponderaciones no suman 100");
             }
@@ -55,12 +55,12 @@ namespace GestionEscolar.Services
         //Comprobamos que las ponderaciones de Especifica sumen 100
         private void ComprobarPoderacionEspecifica(List<EspecificaRequest> listEspecificas)
         {
-            float ponderacio = 0;
+            float ponderacion = 0;
             foreach (var especifica in listEspecificas)
             {
-                ponderacio += especifica.ponderacion;
+                ponderacion += especifica.ponderacion;
             }
-            if(ponderacio != 100)
+            if(ponderacion != 100)
             {
                 throw new PonderacionException("Las ponderaciones no suman 100");
             }

@@ -2,8 +2,6 @@
 using GestionEscolar.Exceptions;
 using GestionEscolar.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
-using System.Web.Http.Results;
 
 namespace GestionEscolar.Controllers
 {
@@ -43,7 +41,7 @@ namespace GestionEscolar.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok(actividadResponse);
+            return Created("", actividadResponse);
         }
 
         [HttpGet]
