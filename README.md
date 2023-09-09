@@ -4,6 +4,8 @@ Gestion Escolar
 Al iniciar el proyecto GestioEscolar, solo hay que ir directamente al postman.
 Con las exportaciones ya tendrá ejemplos para hacer la pruebas de entrada de datos.
 
+Se ha realizado con la versió 6.0
+
 
 Decisiones importantes del proyecto:
 
@@ -18,12 +20,20 @@ EndPoint 3 (DevuelveNota): Se ha hecho una petición de tipo GET, ya que lo que 
 EndPoint 4 (ModificarPonderacion): Se ha hecho una petición de tipo PATCH porque estamos modificando una parte de los valores del las ponderaciones.
 
 Se ha creado una carpeta Model donde se han generado todas las entidades.
+
 También tenemos la carpeta donde encontraremos la clase ActividadController, es la clase que gestiona las solicitudes http.
+
 Luego podemos encontrar la carpeta services que es donde hay todos los eventos principales para llevar a cabo lo que pide el proyecto.
+
 Al no tener persistencia de datos, se han generado varias clases de repositorio, que cuando necesitamos calcular u obtener algún dato que no sea por entrada de datos allí hay.
+
 También se ha generado una carpeta DTO, allí encontraremos clases para la entrada o salida de datos para el postman.
+
 La carpeta de Exception, es donde encontraremos todas la excepciones que utilizamos para poder controlar los posibles errores.
-La carpeta de Test es donde hay los tests unitarios
+
+Para generar los test se ha generado un nuevo proyecto con Xunit.
+
+Para ejecutar los test des del Visual Studio en el menu de Prueva -> Ejecutar todas las pruebas
 
 Se ha creado varis servicios, ya que no todos tratan lo mismo y por tener más ordenado el código.
 
