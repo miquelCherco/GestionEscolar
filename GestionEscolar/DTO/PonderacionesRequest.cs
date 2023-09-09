@@ -4,10 +4,10 @@ namespace GestionEscolar.DTO
 {
     public class PonderacionesRequest
     {
-        public List<Poderacion> listPonderaciones { get; set; }
+        public List<PonderacionRequest> listPonderaciones { get; set; }
     }
 
-    public class Poderacion
+    public class PonderacionRequest
     {
         public string nombre { get; set; }
         public int ponderacion { get; set; }

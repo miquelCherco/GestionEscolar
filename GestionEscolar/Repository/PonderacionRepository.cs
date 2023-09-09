@@ -47,12 +47,12 @@ namespace GestionEscolar.Repository
             }
          };
 
-        public List<Competencia> getCompetencias()
+        public List<Competencia> GetCompetencias()
         {
             return competenciaList;
         }
 
-        public List<Especifica> getEspecificas()
+        public List<Especifica> GetEspecificas()
         {
             return especificaList;
         }

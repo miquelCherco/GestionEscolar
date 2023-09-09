@@ -29,7 +29,7 @@ namespace GestionEscolar.DTO
             public int id { get; set; }
             public String pregunta { get; set; }
             public String tipo {get; set;} 
-            public String respuesta_esperada { get; set;}
+            public String respuestaEsperada { get; set;}
         }
 
         public class Competencia

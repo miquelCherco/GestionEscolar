@@ -18,10 +18,10 @@ namespace GestionEscolar.Services
         private RepeticionesActividadesRepository repeticionesActividades = new RepeticionesActividadesRepository();
 
         //obtener la nota de una actividad por las respuestas enviadas i devolver la cantidad de repeticiones de l'actividad
-        public ActividadResponse enviarRespuestas(int idActividad, EnvioRespuestaRequest datos)
+        public ActividadResponse EnviarRespuestas(int idActividad, EnvioRespuestaRequest datos)
         {
             //obtenemos l'actividad
-            Actividad actividad = actividadRepository.getActividades().Find(act => act.id == idActividad);
+            Actividad actividad = actividadRepository.GetActividades().Find(act => act.id == idActividad);
             if (actividad == null)
                 throw new ActividadNotFoundException("Actividad no encontrada");
 
@@ -71,7 +71,7 @@ namespace GestionEscolar.Services
 
             //Aqui guardariamos la nota de l'actividad en caso de tener persistenica de datos
 
-            int repeticiones = repeticionesActividades.getRepeticionesActividades().Find(act => act.idActividad == idActividad).repticiones;
+            int repeticiones = repeticionesActividades.GetRepeticionesActividades().Find(act => act.idActividad == idActividad).repticiones;
 
             //Añadir repeticion en caso de tener persistencia
             repeticiones++;
@@ -85,17 +85,17 @@ namespace GestionEscolar.Services
         }
 
         //Obtener las nota por tipo de evaluacion
-        public float getNotasByEvaluacion(String evaluacion)
+        public float GetNotasByEvaluacion(String evaluacion)
         {
             float nota = 0;
             //comprobamos de que tipo de evaluación nos pasan
             if (evaluacion.ToUpper().Equals(ACTIVIDADES))
             {
-                nota = calcularNotaPorActividad();
+                nota = CalcularNotaPorActividad();
             }
             else if (evaluacion.ToUpper().Equals(COMPETENCIAS))
             {
-                nota = calcularNotaPorCompetencia();
+                nota = CalcularNotaPorCompetencia();
             }
             else
             {
@@ -105,10 +105,10 @@ namespace GestionEscolar.Services
         }
 
         //calcular la nota por competencia
-        private float calcularNotaPorCompetencia()
+        private float CalcularNotaPorCompetencia()
         {
             Dictionary<string,List<float>> notas = new Dictionary<string,List<float>>();
-            foreach (var actividad in actividadRepository.getActividades())
+            foreach (var actividad in actividadRepository.GetActividades())
             {
                 //si auno no hay la competenci en el diccionario lo añadimos
                 if (!notas.ContainsKey(actividad.competencia))
@@ -130,7 +130,7 @@ namespace GestionEscolar.Services
             {
                 List<float> list = competenica.Value;
                 float sumNota = list.Sum(x => x);
-                float ponderacio = ponderacionRepository.getCompetencias().Find(comp => comp.nombre.Equals(competenica.Key)).ponderacio;
+                float ponderacio = ponderacionRepository.GetCompetencias().Find(comp => comp.nombre.Equals(competenica.Key)).ponderacio;
                 float media = sumNota / list.Count;
 
                 notaFinal += media * ponderacio / 100;
@@ -140,10 +140,10 @@ namespace GestionEscolar.Services
         }
 
         // Calcular la nota per tipo de actividad
-        private float calcularNotaPorActividad()
+        private float CalcularNotaPorActividad()
         {
             Dictionary<string, List<float>> notas = new Dictionary<string, List<float>>();
-            foreach (var actividad in actividadRepository.getActividades())
+            foreach (var actividad in actividadRepository.GetActividades())
             {
                 //si aun no hay el tipo especifico en el diccionario lo añadimos
                 if (!notas.ContainsKey(actividad.especifica))
@@ -166,7 +166,7 @@ namespace GestionEscolar.Services
             {
                 List<float> list = especifica.Value;
                 float sumNota = list.Sum(x => x);
-                float ponderacio = ponderacionRepository.getEspecificas().Find(espe => espe.nombre.Equals(especifica.Key)).ponderacio;
+                float ponderacio = ponderacionRepository.GetEspecificas().Find(espe => espe.nombre.Equals(especifica.Key)).ponderacio;
                 float media = sumNota / list.Count;
 
                 notaFinal += media * ponderacio / 100;

@@ -165,7 +165,7 @@ namespace GestionEscolar.Repository
 //            }
         };
 
-        public List<Actividad> getActividades()
+        public List<Actividad> GetActividades()
         {
             return list;
         }
