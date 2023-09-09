@@ -18,7 +18,7 @@ namespace GestionEscolar.Repository
             }
         };
 
-        public List<RepeticionesActividades> getRepeticionesActividades()
+        public List<RepeticionesActividades> GetRepeticionesActividades()
         {
             return listRepeticiones;
         }

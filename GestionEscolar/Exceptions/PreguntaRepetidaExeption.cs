@@ -11,6 +11,7 @@ namespace GestionEscolar.Exceptions
 
         public PreguntaRepetidaExeption(string? message) : base(message)
         {
+
         }
 
         public PreguntaRepetidaExeption(string? message, Exception? innerException) : base(message, innerException)

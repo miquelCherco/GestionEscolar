@@ -5,10 +5,10 @@ namespace GestionEscolar.Model
     public class Actividad
     {
         public int id { get; set; }
-        public String nombre { get; set; }
+        public string nombre { get; set; }
         public List<Ejercicio> listEjercicios { get; set; }
-        public String competencia { get; set; }
-        public String especifica { get; set; }
+        public string competencia { get; set; }
+        public string especifica { get; set; }
         public int nota { get; set; }
 
     }

@@ -11,16 +11,16 @@ namespace GestionEscolar.Services
         private PonderacionesService ponderacionesService = new PonderacionesService();
 
         //Inicializacion de datos
-        public void inicializarDatos(InicializarRequest datos)
+        public void InicializarDatos(InicializarRequest datos)
         {
-            comprobarPoderacionCompetencia(datos.listCompetencias);
-            comprobarPoderacionEspecifica(datos.listEspecificas);
-            getDatosOK(datos);
+            ComprobarPoderacionCompetencia(datos.listCompetencias);
+            ComprobarPoderacionEspecifica(datos.listEspecificas);
+            GetDatosOK(datos);
             //Aqui guradariamos los datos en caso de tener persistencia de datos
         }
 
         //Comprobar que la'actividad es correcta
-        public void getDatosOK(InicializarRequest datos)
+        public void GetDatosOK(InicializarRequest datos)
         {
             //guardamos los datos en listas
             List<InicializarRequest.Actividad> listActividades = datos.listActividades;
@@ -31,16 +31,16 @@ namespace GestionEscolar.Services
             {
                 //comprobamos que el tipo especifico no este vacio i que exista
                 if (actividad.especifica.Equals("") || listEspecifica.Find(especifica => especifica.nombre.Equals(actividad.especifica)) == null)
-                    throw new EspecificacionNotExistException("La actividad " + actividad.id + " no existe la especificación");
+                    throw new EspecificacionNotFoundException("La actividad " + actividad.id + " no existe la especificación");
 
                 //comprobamos que la competencia no este vacio i que exista
                 if (actividad.competencia.Equals("") || listCompetencia.Find(competencia => competencia.nombre.Equals(actividad.competencia)) == null)
-                    throw new CompetenciaNotExistException("La actividad " + actividad.id + " no existe la competéncia");
+                    throw new CompetenciaNotFoundException("La actividad " + actividad.id + " no tiene competéncia");
             }
         }
 
         //Comprobamos que las ponderaciones de competencia sumen 100
-        private void comprobarPoderacionCompetencia(List<Competencia> listCompetencias)
+        private void ComprobarPoderacionCompetencia(List<Competencia> listCompetencias)
         {
             float ponderacio = 0;
             foreach (var competencia in listCompetencias)
@@ -55,7 +55,7 @@ namespace GestionEscolar.Services
 
 
         //Comprobamos que las ponderaciones de Especifica sumen 100
-        private void comprobarPoderacionEspecifica(List<Especifica> listEspecificas)
+        private void ComprobarPoderacionEspecifica(List<Especifica> listEspecificas)
         {
             float ponderacio = 0;
             foreach (var especifica in listEspecificas)
