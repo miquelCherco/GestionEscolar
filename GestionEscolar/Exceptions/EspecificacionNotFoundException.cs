@@ -3,7 +3,7 @@
 namespace GestionEscolar.Exceptions
 {
     [Serializable]
-    internal class EspecificacionNotFoundException : Exception
+    public class EspecificacionNotFoundException : Exception
     {
         public EspecificacionNotFoundException()
         {

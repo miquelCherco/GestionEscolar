@@ -3,7 +3,7 @@
 namespace GestionEscolar.Exceptions
 {
     [Serializable]
-    internal class ActividadNotFoundException : Exception
+    public class ActividadNotFoundException : Exception
     {
         public ActividadNotFoundException()
         {

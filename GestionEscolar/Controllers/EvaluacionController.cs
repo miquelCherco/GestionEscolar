@@ -38,7 +38,7 @@ namespace GestionEscolar.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            catch (PreguntaRepetidaExeption ex)
+            catch (PreguntaRepetidaException ex)
             {
                 return BadRequest(ex.Message);
             }

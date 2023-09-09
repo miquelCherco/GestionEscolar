@@ -3,7 +3,7 @@
 namespace GestionEscolar.Exceptions
 {
     [Serializable]
-    internal class PonderacionException : Exception
+    public class PonderacionException : Exception
     {
         private object value;
 

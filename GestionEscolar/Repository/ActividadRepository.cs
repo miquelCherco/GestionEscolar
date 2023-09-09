@@ -161,8 +161,6 @@ namespace GestionEscolar.Repository
                     especifica = "Prueba",
                     nota = 10
                 }
-//            };
-//            }
         };
 
         public List<Actividad> GetActividades()

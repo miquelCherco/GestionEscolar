@@ -4,45 +4,45 @@ namespace GestionEscolar.DTO
 {
     public class InicializarRequest
     {
-        public List<Actividad> listActividades {  get; set; }
-        public List<Competencia> listCompetencias {  get; set; }
-        public List<Especifica> listEspecificas { get; set; }
+        public List<ActividadRequest> listActividades {  get; set; }
+        public List<CompetenciaRequest> listCompetencias {  get; set; }
+        public List<EspecificaRequest> listEspecificas { get; set; }
 
-        public class Actividad
+        public class ActividadRequest
         {
             public int id { get; set; }
-            public String nombre { get; set; }
-            public String especifica { get; set; }
-            public String competencia { get; set; }
-            public List<Ejercicio> ejercicios { get; set; }
+            public string nombre { get; set; }
+            public string especifica { get; set; }
+            public string competencia { get; set; }
+            public List<EjercicioRequest> listEjercicios { get; set; }
             public int nota { get; set; }
         }
 
-        public class Ejercicio
+        public class EjercicioRequest
         {
             public int id { get; set; }
-            public List<Pregunta> preguntas { get; set; }
+            public List<PreguntaRequest> listPreguntas { get; set; }
         }
 
-        public class Pregunta
+        public class PreguntaRequest
         {
             public int id { get; set; }
-            public String pregunta { get; set; }
-            public String tipo {get; set;} 
-            public String respuestaEsperada { get; set;}
+            public string pregunta { get; set; }
+            public TipoPregunta tipo {get; set;} 
+            public string respuestaEsperada { get; set;}
         }
 
-        public class Competencia
+        public class CompetenciaRequest
         {
             public int id { get; set;}
-            public String nombre { get; set; }
+            public string nombre { get; set; }
             public float ponderacion { get; set; }
         }
 
-        public class Especifica
+        public class EspecificaRequest
         {
             public int id { get; set; }
-            public String nombre { get; set; }
+            public string nombre { get; set; }
             public float ponderacion { get; set;}
         }
     }

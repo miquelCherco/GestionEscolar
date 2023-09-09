@@ -23,7 +23,7 @@ namespace GestionEscolar.Services
             //obtenemos l'actividad
             Actividad actividad = actividadRepository.GetActividades().Find(act => act.id == idActividad);
             if (actividad == null)
-                throw new ActividadNotFoundException("Actividad no encontrada");
+                throw new ActividadNotFoundException("La Actividad " + idActividad + " no existe");
 
             int aciertos = 0;
             Dictionary<int,List<int>> listEjerciciosPregunta = new Dictionary<int,List<int>>();
@@ -33,19 +33,19 @@ namespace GestionEscolar.Services
                 //obtenemos el ejercicio
                 Ejercicio ejercicio = actividad.listEjercicios.Find(ej => ej.id == respuesta.idEjercicio);
                 if (ejercicio == null)
-                    throw new EjercicioNotFoundException("Ejercicio no encontrado");
+                    throw new EjercicioNotFoundException("El ejercicio " + respuesta.idEjercicio + " no existe");
 
                 //obtenemos la pregunta
                 Pregunta pregunta = ejercicio.listPreguntas.Find(preg => preg.id == respuesta.idPregunta);
                 if (pregunta == null)
-                    throw new PreguntaNotFoundException("Pregunta no encontrada");
+                    throw new PreguntaNotFoundException("La pregunta " + respuesta.idPregunta + " no existe");
 
                 List<int> listPreguntas = new List<int>();
                 if (listEjerciciosPregunta.ContainsKey(ejercicio.id))
                 {
-                    if (listEjerciciosPregunta.Keys.Contains(pregunta.id))
+                    if (listEjerciciosPregunta[ejercicio.id].Contains(pregunta.id))
                     {
-                        throw new PreguntaRepetidaExeption("La misma pregunta se ha enviado mas de una vez");
+                        throw new PreguntaRepetidaException("La pregunta " + pregunta.id + " se ha enviado mas de una vez");
                     }
                 }
 
@@ -85,7 +85,7 @@ namespace GestionEscolar.Services
         }
 
         //Obtener las nota por tipo de evaluacion
-        public float GetNotasByEvaluacion(String evaluacion)
+        public float GetNotasByEvaluacion(string evaluacion)
         {
             float nota = 0;
             //comprobamos de que tipo de evaluación nos pasan

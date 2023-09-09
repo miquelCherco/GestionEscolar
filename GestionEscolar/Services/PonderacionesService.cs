@@ -2,6 +2,7 @@
 using GestionEscolar.Exceptions;
 using GestionEscolar.Model;
 using GestionEscolar.Repository;
+using System;
 
 namespace GestionEscolar.Services
 {
@@ -69,7 +70,7 @@ namespace GestionEscolar.Services
                 Model.Competencia competenciaActual = ponderacionRepository.GetCompetencias().Find(comp => comp.nombre.Equals(competencia.nombre));
                 if(competenciaActual == null)
                 {
-                    throw new CompetenciaNotFoundException("Competencia no existe");
+                    throw new CompetenciaNotFoundException("La competencia " + competencia.nombre + " no existe");
                 }
                 ponderacio += competencia.ponderacion;
             }

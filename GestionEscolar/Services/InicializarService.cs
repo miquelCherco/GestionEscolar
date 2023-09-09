@@ -7,8 +7,6 @@ namespace GestionEscolar.Services
 {
     public class InicializarService
     {
-        //Servicios
-        private PonderacionesService ponderacionesService = new PonderacionesService();
 
         //Inicializacion de datos
         public void InicializarDatos(InicializarRequest datos)
@@ -20,12 +18,12 @@ namespace GestionEscolar.Services
         }
 
         //Comprobar que la'actividad es correcta
-        public void GetDatosOK(InicializarRequest datos)
+        private void GetDatosOK(InicializarRequest datos)
         {
             //guardamos los datos en listas
-            List<InicializarRequest.Actividad> listActividades = datos.listActividades;
-            List<Competencia> listCompetencia = datos.listCompetencias;
-            List<Especifica> listEspecifica = datos.listEspecificas;
+            List<ActividadRequest> listActividades = datos.listActividades;
+            List<CompetenciaRequest> listCompetencia = datos.listCompetencias;
+            List<EspecificaRequest> listEspecifica = datos.listEspecificas;
 
             foreach (var actividad in listActividades)            
             {
@@ -40,7 +38,7 @@ namespace GestionEscolar.Services
         }
 
         //Comprobamos que las ponderaciones de competencia sumen 100
-        private void ComprobarPoderacionCompetencia(List<Competencia> listCompetencias)
+        private void ComprobarPoderacionCompetencia(List<CompetenciaRequest> listCompetencias)
         {
             float ponderacio = 0;
             foreach (var competencia in listCompetencias)
@@ -55,7 +53,7 @@ namespace GestionEscolar.Services
 
 
         //Comprobamos que las ponderaciones de Especifica sumen 100
-        private void ComprobarPoderacionEspecifica(List<Especifica> listEspecificas)
+        private void ComprobarPoderacionEspecifica(List<EspecificaRequest> listEspecificas)
         {
             float ponderacio = 0;
             foreach (var especifica in listEspecificas)

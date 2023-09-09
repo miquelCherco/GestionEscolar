@@ -2,10 +2,10 @@
 {
     public class EnvioRespuestaRequest
     {
-        public List<Respuesta> listRespuestas { get; set; }
+        public List<RespuestaRequest> listRespuestas { get; set; }
     }
 
-    public class Respuesta
+    public class RespuestaRequest
     {
         public int idEjercicio { get; set; }
         public int idPregunta { get; set; }
