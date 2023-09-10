@@ -36,7 +36,7 @@ Decisiones importantes del proyecto:
 
 - Se ha creado varis servicios, ya que no todos tratan lo mismo y por tener más ordenado el código.
 
-- Para generar los test se ha generado un nuevo proyecto con Xunit, para ejecutar los test des del Visual Studio en el menu de Prueva -> Ejecutar todas las pruebas
+- Para generar los test se ha generado un nuevo proyecto con Xunit, para ejecutar los test des del Visual Studio en el menu de Prueba -> Ejecutar todas las pruebas
 - Se han geneado test para todos los metodos publicos de las clases services.
 
 
