@@ -23,7 +23,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new PonderacionRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -44,7 +44,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new PonderacionResponse {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -55,6 +55,7 @@ namespace GestionEscolar.Test
             Assert.Equivalent(response,ponderacionResponse);
         }
 
+        //Se ha puesto la evaluacion TEST que no existe
         [Fact]
         public void ModificarPonderacionEvaluacionNotFound()
         {
@@ -69,7 +70,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new PonderacionRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -80,6 +81,7 @@ namespace GestionEscolar.Test
             Assert.Throws<EvaluacioNotFoundException>(() => service.ModificarPonderacion(evaluacion, request));
         }
 
+        //Se ha introducido la especifica Test que no existe
         [Fact]
         public void ModificarPonderacionEspecificaNotFound()
         {
@@ -108,6 +110,8 @@ namespace GestionEscolar.Test
             Xunit.Assert.Throws<EspecificacionNotFoundException>(() => service.ModificarPonderacion(evaluacion, request));
         }
 
+
+        //Se ha introducido la competencia Test que no existe
         [Fact]
         public void ModificarPonderacionCompetenciaNotFound()
         {
@@ -122,7 +126,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new PonderacionRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -134,6 +138,7 @@ namespace GestionEscolar.Test
 
         }
 
+        //Se ha modificado la ponderacion para que no sume 100
         [Fact]
         public void ModificarPonderacionPonderacionError()
         {
@@ -148,7 +153,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new PonderacionRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 60
                 }
             };

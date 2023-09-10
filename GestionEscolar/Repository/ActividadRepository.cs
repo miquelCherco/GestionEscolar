@@ -64,7 +64,7 @@ namespace GestionEscolar.Repository
                             }
                         }
                     },
-                    competencia = "Matematica",
+                    competencia = "Matematicas",
                     especifica = "Ejercicio",
                     nota = 10
                 },

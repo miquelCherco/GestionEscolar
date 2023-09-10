@@ -72,7 +72,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new CompetenciaRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -82,6 +82,8 @@ namespace GestionEscolar.Test
             Assert.True(service.InicializarDatos(request));
         }
 
+
+        //se ha vaciado la especifica
         [Fact]
         public void InicializarDatosEspecificacionNotFound()
         {
@@ -144,7 +146,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new CompetenciaRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -155,6 +157,7 @@ namespace GestionEscolar.Test
             Assert.Throws<EspecificacionNotFoundException>(() => service.InicializarDatos(request));
         }
 
+        //Se ha vaciado la competencia
         [Fact]
         public void InicializarDatosCompetenciaNotFound()
         {
@@ -217,7 +220,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new CompetenciaRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 50
                 }
             };
@@ -228,6 +231,7 @@ namespace GestionEscolar.Test
             Assert.Throws<CompetenciaNotFoundException>(() => service.InicializarDatos(request));
         }
 
+        //Se ha modificado la ponderacion para que no de 100
         [Fact]
         public void InicializarDatosPonderacionError()
         {
@@ -290,7 +294,7 @@ namespace GestionEscolar.Test
                     ponderacion = 20
                 },
                 new CompetenciaRequest {
-                    nombre = "Matematica",
+                    nombre = "Matematicas",
                     ponderacion = 80
                 }
             };

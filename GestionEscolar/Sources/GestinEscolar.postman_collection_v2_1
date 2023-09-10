@@ -251,7 +251,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\":1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -709,7 +709,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Ejercicio\",\r\n            \"ponderacion\": 60\r\n        },\r\n        {\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+					"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Ejercicio\",\r\n            \"ponderacion\": 50\r\n        },\r\n        {\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -717,7 +717,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7267/ponderaciones/ponderacion/competencias",
+					"raw": "https://localhost:7267/ponderaciones/ponderacion/actividades",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -726,7 +726,7 @@
 					"path": [
 						"ponderaciones",
 						"ponderacion",
-						"competencias"
+						"actividades"
 					]
 				}
 			},
@@ -738,7 +738,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Test\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -769,7 +769,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 08 Sep 2023 18:16:39 GMT"
+							"value": "Sun, 10 Sep 2023 09:35:19 GMT"
 						},
 						{
 							"key": "Server",
@@ -781,7 +781,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"listPonderaciones\": [\n        {\n            \"nombre\": \"Matematica\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Social\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Digital\",\n            \"ponderacion\": 60\n        }\n    ]\n}"
+					"body": "{\n    \"listPonderaciones\": [\n        {\n            \"nombre\": \"Matematicas\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Social\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Digital\",\n            \"ponderacion\": 60\n        }\n    ]\n}"
 				},
 				{
 					"name": "Ponderaciones no suman 100 NOK",
@@ -790,7 +790,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Matematica\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

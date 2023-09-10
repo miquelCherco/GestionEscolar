@@ -1,0 +1,750 @@
+{
+	"info": {
+		"_postman_id": "955ce0bd-d05f-4044-ac06-99f3ae250783",
+		"name": "GestinEscolar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29587874"
+	},
+	"item": [
+		{
+			"name": "Inicializar Datos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"listActividades\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Sumar con 2 cifras\",\r\n            \"especifica\": \"Prueba\",\r\n            \"competencia\": \"Matematicas\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 1 + 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"2\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 5 + 5?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"10\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Restar con 2 cifras\",\r\n            \"especifica\": \"Ejercicios\",\r\n            \"competencia\": \"Digital\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 2 - 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"1\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 10 - 5\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"5\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"listCompetencias\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 50\r\n        }\r\n    ],\r\n    \"listEspecificas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 40\r\n        },{\r\n            \"id\": 2,\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Ejercicios\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7267/actividades/inicializar-datos"
+			},
+			"response": [
+				{
+					"name": "Inicializar Datos OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listActividades\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Sumar con 2 cifras\",\r\n            \"especifica\": \"Prueba\",\r\n            \"competencia\": \"Matematicas\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 1 + 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"2\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 5 + 5?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"10\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Restar con 2 cifras\",\r\n            \"especifica\": \"Ejercicios\",\r\n            \"competencia\": \"Digital\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 2 - 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"1\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 10 - 5\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"5\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"listCompetencias\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 50\r\n        }\r\n    ],\r\n    \"listEspecificas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 40\r\n        },{\r\n            \"id\": 2,\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Ejercicios\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/actividades/inicializar-datos"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:12:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				},
+				{
+					"name": "Especifica no existe NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listActividades\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Sumar con 2 cifras\",\r\n            \"especifica\": \"\",\r\n            \"competencia\": \"Matematicas\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 1 + 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"2\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 5 + 5?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"10\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Restar con 2 cifras\",\r\n            \"especifica\": \"Ejercicios\",\r\n            \"competencia\": \"Digital\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 2 - 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"1\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 10 - 5\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"5\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"listCompetencias\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 50\r\n        }\r\n    ],\r\n    \"listEspecificas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 40\r\n        },{\r\n            \"id\": 2,\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Ejercicios\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/actividades/inicializar-datos"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:53:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La actividad 1 no existe la especificación"
+				},
+				{
+					"name": "Competencia no existe NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listActividades\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Sumar con 2 cifras\",\r\n            \"especifica\": \"Prueba\",\r\n            \"competencia\": \"\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 1 + 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"2\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 5 + 5?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"10\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Restar con 2 cifras\",\r\n            \"especifica\": \"Ejercicios\",\r\n            \"competencia\": \"Digital\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 2 - 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"1\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 10 - 5\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"5\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"listCompetencias\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 50\r\n        }\r\n    ],\r\n    \"listEspecificas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 40\r\n        },{\r\n            \"id\": 2,\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Ejercicios\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/actividades/inicializar-datos"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 19:44:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La actividad 1 no existe la competéncia"
+				},
+				{
+					"name": "Ponderaciones no suman 100 NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listActividades\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Sumar con 2 cifras\",\r\n            \"especifica\": \"Prueba\",\r\n            \"competencia\": \"Matematicas\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 1 + 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"2\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 5 + 5?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"10\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Restar con 2 cifras\",\r\n            \"especifica\": \"Ejercicios\",\r\n            \"competencia\": \"Digital\",\r\n            \"listEjercicios\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"listPreguntas\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"pregunta\": \"¿Cuánto es 2 - 1?\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"1\"\r\n                        },\r\n                        {\r\n                            \"id\": 2,\r\n                            \"pregunta\": \"¿Cuánto es 10 - 5\",\r\n                            \"tipo\": 0,\r\n                            \"respuestaEsperada\": \"5\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"listCompetencias\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 50\r\n        }\r\n    ],\r\n    \"listEspecificas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 40\r\n        },{\r\n            \"id\": 2,\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 40\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Ejercicios\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/actividades/inicializar-datos"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:54:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Las ponderaciones no suman 100"
+				}
+			]
+		},
+		{
+			"name": "Envio de respuestas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\":1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7267/evaluacion/envio-respuestas/1"
+			},
+			"response": [
+				{
+					"name": "Envio respuesta OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/evaluacion/envio-respuestas/1"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:12:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nota\": 10,\n    \"numeroRepeticiones\": 3\n}"
+				},
+				{
+					"name": "Pregunta repetida NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/evaluacion/envio-respuestas/1"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:37:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La pregunta 2 se ha enviado mas de una vez"
+				},
+				{
+					"name": "Pregunta no existe NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 5,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/evaluacion/envio-respuestas/1"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:41:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La pregunta 5 no existe"
+				},
+				{
+					"name": "Ejercicio no existe NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 5,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/evaluacion/envio-respuestas/1"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:42:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "El ejercicio 5 no existe"
+				},
+				{
+					"name": "Actividad no existe NOK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listRespuestas\": [\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 1,\r\n            \"respuesta\": \"2\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 2,\r\n            \"respuesta\": \"10\"\r\n        },\r\n        {\r\n            \"idEjercicio\": 1,\r\n            \"idPregunta\": 3,\r\n            \"respuesta\": \"Mercurio\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/evaluacion/envio-respuestas/8"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:42:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La Actividad 8 no existe"
+				}
+			]
+		},
+		{
+			"name": "Notes Evaluacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7267/evaluacion/nota-evaluacion/Competencias"
+			},
+			"response": [
+				{
+					"name": "Actividades OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7267/evaluacion/nota-evaluacion/Actividades"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2023 18:19:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "6"
+				},
+				{
+					"name": "Competencias OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7267/evaluacion/nota-evaluacion/Competencias"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2023 18:20:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "10"
+				},
+				{
+					"name": "Evaluacion no existe NOK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7267/evaluacion/nota-evaluacion/TEST"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:44:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La evaluacion TEST no existe"
+				}
+			]
+		},
+		{
+			"name": "Modificar Ponderaciones",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Ejercicio\",\r\n            \"ponderacion\": 50\r\n        },\r\n        {\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7267/ponderaciones/ponderacion/actividades"
+			},
+			"response": [
+				{
+					"name": "Competencias OK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/ponderaciones/ponderacion/competencias"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 09:35:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listPonderaciones\": [\n        {\n            \"nombre\": \"Matematicas\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Social\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Digital\",\n            \"ponderacion\": 60\n        }\n    ]\n}"
+				},
+				{
+					"name": "Ponderaciones no suman 100 NOK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Matematicas\",\r\n            \"ponderacion\": 30\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/ponderaciones/ponderacion/competencias"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:45:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Las ponderaciones no suman 100"
+				},
+				{
+					"name": "Competencia no existe NOK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Test\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Social\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Digital\",\r\n            \"ponderacion\": 60\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/ponderaciones/ponderacion/competencias"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:48:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "La competencia Test no existe"
+				},
+				{
+					"name": "Especificas OK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Prueba\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Ejercicio\",\r\n            \"ponderacion\": 60\r\n        },\r\n        {\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/ponderaciones/ponderacion/actividades"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:50:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"listPonderaciones\": [\n        {\n            \"nombre\": \"Prueba\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Actividad\",\n            \"ponderacion\": 20\n        },\n        {\n            \"nombre\": \"Ejercicio\",\n            \"ponderacion\": 60\n        },\n        {\n            \"nombre\": \"Autoevaluacion\",\n            \"ponderacion\": 0\n        }\n    ]\n}"
+				},
+				{
+					"name": "Especifica no existe NOK",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"listPonderaciones\": [\r\n        {\r\n            \"nombre\": \"Test\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Actividad\",\r\n            \"ponderacion\": 20\r\n        },\r\n        {\r\n            \"nombre\": \"Ejercicio\",\r\n            \"ponderacion\": 60\r\n        },\r\n        {\r\n            \"nombre\": \"Autoevaluacion\",\r\n            \"ponderacion\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7267/ponderaciones/ponderacion/actividades"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:50:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Especifica Test no existe"
+				}
+			]
+		}
+	]
+}

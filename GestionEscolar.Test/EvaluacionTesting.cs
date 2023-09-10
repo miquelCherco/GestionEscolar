@@ -41,6 +41,7 @@ namespace GestionEscolar.Test
             Assert.Equivalent(response,r);
         }
 
+        //Se ha pasado un idActividad = 10 que no existe
         [Fact]
         public void EnviarRespuestaActividadNotFound()
         {
@@ -68,6 +69,7 @@ namespace GestionEscolar.Test
             Assert.Throws<ActividadNotFoundException>(() => service.EnviarRespuestas(idActividad, request));
         }
 
+        //Se ha introducido el ejercicio 5 que no existe
         [Fact]
         public void EnviarRespuestaEjercicioNotFound()
         {
@@ -95,6 +97,7 @@ namespace GestionEscolar.Test
             Assert.Throws<EjercicioNotFoundException>(() => service.EnviarRespuestas(idActividad, request));
         }
 
+        //Se ha introducido una pregunta que no existe
         [Fact]
         public void EnviarRespuestaPreguntaNotFound()
         {
@@ -122,6 +125,7 @@ namespace GestionEscolar.Test
             Assert.Throws<PreguntaNotFoundException>(() => service.EnviarRespuestas(idActividad, request));
         }
 
+        //Se ha introducido una pregunta repetida la numero 2 del ejercicio 1
         [Fact]
         public void EnviarRespuestaPreguntaRepetida()
         {
@@ -141,7 +145,7 @@ namespace GestionEscolar.Test
                 new RespuestaRequest {
                     idEjercicio = 1,
                     idPregunta = 2,
-                    respuesta = "10"
+                    respuesta = "Mercurio"
                 }
             };
             request.listRespuestas = listRespuestas;
@@ -157,6 +161,7 @@ namespace GestionEscolar.Test
             Assert.Equal(6.0, response);
         }
 
+        //Se ha introducido la evaluacion Test que no existe
         [Fact]
         public void GetNotaEvaluacionNotFound()
         {

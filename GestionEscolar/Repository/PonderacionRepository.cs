@@ -17,7 +17,7 @@ namespace GestionEscolar.Repository
             },
             new Competencia {
                 id = 3,
-                nombre = "Matematica",
+                nombre = "Matematicas",
                 ponderacion = 50
             }
         };
